@@ -1,0 +1,18 @@
+<p>list-invoice works!</p>
+<div *ngFor="let p of list">
+    <label> idInvoice</label>
+    {{p.idInvoice}}
+    <label> discountAmount </label>
+    {{p.discountAmount}}
+    <label> billAmount </label>
+    {{p.billAmount}}
+    <label> dateBill </label>
+    {{p.dateBill}}
+    <label> status </label>
+   <h1>{{p.status}}</h1> 
+   {{p.status}}
+   <a routerLink="/remove/{{p.idInvoice}}">remove</a>
+   <a [routerLink]="['/update/',p.idInvoice]">update</a>
+</div>
+
+   

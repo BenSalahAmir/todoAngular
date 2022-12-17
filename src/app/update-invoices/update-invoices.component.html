@@ -1,0 +1,18 @@
+<p>update-invoices works!</p>
+<form #f="ngForm" class="form-group">
+    <label>id invoice </label>
+    <input type="number" name="idInvoice"  [(ngModel)]="p.idInvoice" class="form-control">
+    <label>discountAmount *</label>
+    <input type="number" name="discountAmount" [(ngModel)]="p.discountAmount" class="form-control">
+
+    <label>billAmount</label>
+    <input type="number" name="billAmount" [(ngModel)]="p.billAmount" class="form-control">
+
+    <label>dateBill</label>
+    <input type="text" name="dateBill" [(ngModel)]="p.dateBill" class="form-control">
+
+    <label>Status</label>
+    <input type="text" name="status" [(ngModel)]="p.status" class="form-control">
+
+    <input type="submit" value="update" (click)="updateP(f.value)" >
+</form>

@@ -1,0 +1,24 @@
+<form #f="ngForm">
+    <label >id</label>
+    <input type="number" name="id" ngModel #id="ngModel" required>
+    <div *ngIf="id.invalid">
+        required
+    </div>
+    <label >title</label>
+    <input type="text" name="title" ngModel #title="ngModel" required minlength="3" >
+    <div *ngIf="title.invalid && title.touched">
+    <div *ngIf="title.errors?.['required']">
+        required
+    </div>
+    <div *ngIf="title.errors?.['minlength']">
+        minlength
+    </div>
+    </div>
+    <label >quantity</label>
+    <input type="text" name="quantity" ngModel #Q="ngModel" pattern="[0-9]{3}">
+    <div *ngIf="Q.value<0">
+    the quantity must be grater than zero
+    </div>
+    <input type="submit" value="save" (click)="addElementToTab(f.value)" [disabled]="f.invalid">
+    </form>
+    

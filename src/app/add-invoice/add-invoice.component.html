@@ -1,0 +1,18 @@
+<p>add-invoice works!</p>
+<form #f="ngForm" class="form-group">
+    <label>id invoice </label>
+    <input type="number" name="idInvoice"  class="form-control" ngModel>
+    <label>discountAmount *</label>
+    <input type="number" name="discountAmount" class="form-control"ngModel>
+
+    <label>billAmount</label>
+    <input type="number" name="billAmount" class="form-control"ngModel>
+
+    <label>dateBill</label>
+    <input type="text" name="dateBill" class="form-control"ngModel>
+
+    <label>status</label>
+    <input type="text" name="status" class="form-control"ngModel>
+
+    <input type="submit" value="add invoice" (click)="addI(f.value)">
+</form>
